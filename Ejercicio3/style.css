@@ -1,0 +1,19 @@
+.p{
+    color: #C2C2C2;
+}
+
+img {
+    padding: 10px;
+}
+
+
+table {
+    border: 1px solid #C6C6C6;
+}
+
+
+td,th{
+    border: 1px solid #C6C6C6;
+    text-align: center;
+}
+
