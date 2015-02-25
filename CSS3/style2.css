@@ -14,7 +14,7 @@ li{
 label{
     display: block;
     color: grey;
-    font-size: 0.8 em;
+    font-size: 0.8em;
 }
 
 li > label{
@@ -40,7 +40,6 @@ input{
     display: block;
 }
 
-li:nth-child(2) > div > span:nth-child(3), li:nth-child(2) > div > span:nth-child(4){
-    width: 50%;
-    float:  left;
+li:nth-child(2) > div > span:nth-child(2), li:nth-child(2) > div > span:nth-child(3), li:nth-child(2) > div > span:nth-child(4), li:nth-child(2) > div > span:nth-child(5){
+    display: inline-block;
 }
