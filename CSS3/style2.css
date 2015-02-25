@@ -1,0 +1,46 @@
+.requerido {
+    color: red;
+}
+
+li{
+    float: lefT;
+    width: 50%;
+
+    list-style-type: none;
+
+    margin: 0;
+}
+
+label{
+    display: block;
+    color: grey;
+    font-size: 0.8 em;
+}
+
+li > label{
+    font-size: 1em;
+    color: black;
+}
+
+li:last-child{
+    width: 100%;
+
+    border-top:1px solid black;
+    padding-top: 1em;
+
+    text-transform: right;
+
+}
+
+li:last-child input{
+    float: right;
+}
+
+input{
+    display: block;
+}
+
+li:nth-child(2) > div > span:nth-child(3), li:nth-child(2) > div > span:nth-child(4){
+    width: 50%;
+    float:  left;
+}

@@ -1,0 +1,73 @@
+.requerido {
+    color: red;
+}
+
+ul li {
+    list-style-type: none;
+    float: left;
+    width: 50%;
+}
+
+ul li:last-child {
+    width: 85%;
+    text-align: right;
+}
+
+.titulo {
+    font-weight: bold;
+}
+
+ul {
+    float: left;
+}
+
+ul li div {
+    width: 100%;
+    float: left;
+}
+
+ul li div span {
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+ul li div span.especial1 {
+    width: 30%;
+}
+
+ul li div span.especial2 {
+    width: 50%;
+    float: right;
+}
+
+ul li div span.especial3 {
+    width: 30%;
+}
+
+ul li span label {
+    color: #c6c6c6;
+    font-size: 0.8em;
+    width: 100%;
+    float: left;
+}
+
+#nombre {
+    width: 40%;
+}
+
+#apellido1,
+#apellido2,
+#direccion,
+#email {
+    width: 70%;
+}
+
+.ayuda {
+    display: none;
+}
+
+.clearfix {
+    clear: both;
+}
