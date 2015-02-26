@@ -9,6 +9,10 @@ body {
     font-size: 1.5em;
 }
 
+a{
+    border: none;
+}
+
 img {
     border: none;
     position: absolute;
