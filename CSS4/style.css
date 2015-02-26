@@ -1,0 +1,66 @@
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+body {
+    background-color: orange;
+
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+
+h1 {
+    color: #FFF;
+    font-size: 2em;
+
+    text-transform: uppercase;
+    text-align:  center;
+
+    letter-spacing: 0.3em;
+
+    padding-top: 1%;
+}
+
+h1 + p{
+    text-align: right;
+    font-size: 0.8em;
+
+    font-style: italic;
+}
+
+div{
+    padding: 1%;
+
+    margin: 2% 4%;
+}
+
+div p{
+    font-size: 0.8em;
+
+    line-height: 1.5em;
+}
+
+.yellow{
+    background-color: yellow;
+
+    border: 5px solid violet;
+}
+
+.violet{
+    background-color: violet;
+
+    border: 5px dashed yellow;
+}
+
+.grey{
+    background-color: #c2c2c2;
+
+    border: 5px dotted yellow;
+}
+
+.olive{
+    background-color: #CCCC99;
+
+    border: 5px dotted violet;
+}
