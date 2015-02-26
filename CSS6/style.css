@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #98F4AA;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+}
+
+img {
+    border: none;
+    position: absolute;
+}
+
+img#i01 {
+    top: 15%;
+    left: 10%;
+}
+
+img#i02 {
+    top: 15%;
+    left: 20%;
+}
+
+img#i03 {
+    top: 15%;
+    left: 40%;
+}
+
+img#i04 {
+    top: 15%;
+    left: 60%;
+}
+
+img#i05 {
+    top: 15%;
+    left: 80%;
+}
+
+img#i06 {
+    top: 55%;
+    left: 15%;
+}
+
+img#i07 {
+    top: 55%;
+    left: 80%;
+}
+
+img#i08 {
+    top: 70%;
+    left: 15%;
+}
+
+img#i09 {
+    top: 90%;
+    left: 15%;
+}
+
+img#i10 {
+    top: 95%;
+    left: 35%;
+}
+
+img#i11 {
+    top: 90%;
+    left: 65%;
+}
+
+img#i12 {
+    top: 85%;
+    left: 80%;
+}
+
+img#i13 {
+    top: 90%;
+    left: 90%;
+}
+
+img#i14 {
+    top: 75%;
+    left: 10%;
+}
+
+img#i15 {
+    top: 55%;
+    left: 15%;
+}
+
+img#i16 {
+    top: 30%;
+    left: 90%;
+}
+
+div.citas {
+    background-color: #c2c2c2;
+    left: 25%;
+    height: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 25%;
+    width: 50%;
+}
+
+div.citas div{
+    height: 90%;
+    width: 94%;
+
+    padding: 5% 3%;
+}
+
+div.citas div p{
+    line-height: 2em;
+}
+
+div.citas div p:first-child:first-letter{
+    color: red;
+
+    font-size: 2em;
+}
+
+div.citas div p:last-child{
+    text-align: right;
+
+    font-style: italic;
+}
