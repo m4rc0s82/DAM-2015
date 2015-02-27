@@ -134,6 +134,19 @@ h1{
 
 .news ul li{
     padding-bottom: 2%;
+
+    border-bottom: 1px solid #dddddd;
+    padding-top: 2%;
+}
+
+.news ul li:first-child{
+    padding-top: 0;
+}
+
+.news ul li:last-child{
+    padding-bottom: 2%;
+
+    border-bottom: none;
 }
 
 h2.title{
@@ -195,7 +208,9 @@ h3{
 }
 
 .featured ul li{
-    padding: 1%;
+    padding: 3%;
+
+    border-bottom: 1px solid #dddddd;
 }
 
 .featured ul li a.links{
