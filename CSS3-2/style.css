@@ -1,5 +1,5 @@
 
-.offset { overflow: hidden; margin: 20px 0 40px 20px; }
+.offset { overflow: hidden; margin: 20px 0 40px 20px; padding-left: 5px; padding-bottom: 5px;}
 
 .offset div {
     background-color: #eee;
@@ -35,11 +35,11 @@
 }
 
 .exampleboxshadowe{
-    box-shadow: 0 0 0 2px rgba(0,0,0,0.75);
+    box-shadow: 0 0 1px 2px rgba(0,0,0,0.75);
 }
 
 .exampleboxshadowf{
-    box-shadow: 0 0 5px 2px rgba(0,0,0,0.75) inset;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.75) inset;
 }
 
 .exampleboxshadowg{
@@ -59,9 +59,9 @@
 }
 
 .exampleboxshadowk{
-    box-shadow: 0 0 0 2px rgba(0,0,0,0.75) inset;
+    box-shadow: 0 0 1px 2px rgba(0,0,0,0.75) inset;
 }
 
 .exampleboxshadowl{
-    box-shadow: 0 0 5px 2px rgba(0,0,0,0.75) inset;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.75) inset;
 }
