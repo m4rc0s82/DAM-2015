@@ -1,0 +1,52 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Ejercicio 5 - Transiciones CSS</title>
+
+        <link type="text/css" rel="stylesheet" href="style.css" />
+        <script type="text/javascript">
+            function listener(e) {
+                console.log("entro en listener");
+                var l = document.createElement("li");
+                switch(e.type) {
+                    case "animationstart":
+                        l.innerHTML = "Started: elapsed time is " + e.elapsedTime;
+                        break;
+                    case "animationend":
+                        l.innerHTML = "Ended: elapsed time is " + e.elapsedTime;
+                        break;
+                    case "animationiteration":
+                        l.innerHTML = "New loop started at time " + e.elapsedTime;
+                        break;
+                }
+                document.getElementById("output").appendChild(l);
+            }
+
+            function setup() {
+                var e = document.getElementById("watchme");
+                console.log(e);
+                e.addEventListener("animationstart", listener, false);
+                e.addEventListener("animationend", listener, false);
+                e.addEventListener("animationiteration", listener, false);
+                var e = document.getElementById("watchme");
+                e.className = "slidein";
+            }
+
+
+        </script>
+    </head>
+    <body onload="javascript:setup();">
+        <h1 id="watchme">Prueba de animacion</h1>
+        <ul id="output"></ul>
+        <div id="container">
+            <div class="ex01"><div class="box">Caja 1</div></div>
+            <div class="ex02"><div class="box">Caja 2</div></div>
+            <div class="ex03"><div class="box">Caja 3</div></div>
+            <div class="ex04"><div class="box">Caja 4</div></div>
+        </div>
+    </body>
+</html>

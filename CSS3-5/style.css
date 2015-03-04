@@ -1,0 +1,82 @@
+#container { width: 500px; height:500px; position: relative;}
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    font-size: 20px;
+    position:absolute;
+    padding: 5px;
+
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -ie-transition: all 2s;
+    transition: all 2s;
+}
+.box:hover {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    color: yellow;
+    font-size: 18px;
+    position:absolute;
+
+    transform: rotate(-90deg);
+}
+.ex01 .box {
+    left: 10px;
+    top: 10px;
+}
+
+.ex01 .box:hover{
+    left: 500px;
+    top: 130px;
+}
+
+.ex02 .box {
+    left: 10px;
+    top: 130px;
+}
+
+.ex02 .box:hover{
+    left: 500px;
+    top: 10px;
+}
+
+.ex03 .box {
+    left: 10px;
+    top: 250px;
+}
+
+.ex03 .box:hover{
+    left: 500px;
+    top: 370px;
+}
+
+.ex04 .box {
+    left: 10px;
+    top: 370px;
+}
+
+.ex04 .box:hover{
+    left: 500px;
+    top: 250px;
+}
+
+h1 {
+    -webkit-animation-duration: 3s;
+    -webkit-animation-name: slidein;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
