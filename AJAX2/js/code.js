@@ -7,6 +7,8 @@ window.onload = function() {
     var url = document.location.href;
     elem.value = url;
 
+    var timestamp1 = 0;
+
     function htmlEntities(str) {
         return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
@@ -22,15 +24,19 @@ window.onload = function() {
 
     var peticion_http;
 
-    var timestamp1 = parseInt(new Date().getTime());
-    var timestamp2 = parseInt(new Date().getTime());
-
     function cargaContenido(url, metodo, funcion) {
+        // Borrar datos anteriores
+        document.getElementById('contenidos').innerHTML = "";
+        document.getElementById('cabeceras').innerHTML = "";
+        document.getElementById('estados').innerHTML = "";
+        document.getElementById("codigo").innerHTML = "";
+
         peticion_http = inicializa_xhr();
 
         if(peticion_http) {
             peticion_http.onreadystatechange = funcion;
-            peticion_http.open(metodo, url, true);
+            timestamp1 =  new Date();
+            peticion_http.open(metodo, elem.value+'?nocache='+Math.random(), true);
             peticion_http.send(null);
         }
     }
@@ -57,17 +63,21 @@ window.onload = function() {
         } if (peticion_http.readyState == 4){
             estado = "Completado";
         }
+        var timestamp2 =  new Date();
+
+        var milisegundos = timestamp2 -timestamp1;
+        document.getElementById("estados").innerHTML += estado + " [" + milisegundos + " mseg]<br/>";
 
         if(peticion_http.readyState == READY_STATE_COMPLETE) {
             if(peticion_http.status == 200) {
-                timestamp2 = parseInt(new Date().getTime());
-                document.getElementById("estados").innerHTML += estado + " " +(timestamp2-timestamp1) +"<br/>";
                 document.getElementById("cabeceras").innerHTML = peticion_http.getAllResponseHeaders();
                 document.getElementById("codigo").innerHTML = peticion_http.status +" "+ peticion_http.statusText;
                 document.getElementById("contenidos").innerHTML = htmlEntities(peticion_http.responseText);
             }
-        } else{
-            document.getElementById("estados").innerHTML += estado + " " + (timestamp2-timestamp1) + "<br/>";
+        } else {
+                document.getElementById("cabeceras").innerHTML = peticion_http.getAllResponseHeaders();
+                document.getElementById("codigo").innerHTML = peticion_http.status +" "+ peticion_http.statusText;
+                document.getElementById("contenidos").innerHTML = htmlEntities(peticion_http.responseText);
         }
     }
 
@@ -77,4 +87,4 @@ window.onload = function() {
 
     document.getElementById("enviar").addEventListener("click", descargaArchivo, true);
 
-}
+};
