@@ -17,7 +17,7 @@ document.body.appendChild(parrafo2);
 var parrafo3 = document.createElement("p");
 var cont = 0;
 for(var i=0; i<enlaces.length; i++) {
-  if (enlaces[i].href == "http://prueba/"){
+    if ((enlaces[i].href == "http://prueba/") || (enlaces[i].href == "http://prueba")){
       console.log(enlaces[i].href);
     cont++;
   }
