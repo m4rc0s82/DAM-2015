@@ -72,11 +72,17 @@ window.onload = function(){
 
 
     var cargarMunicipios = function (){
-        peticion_http = inicializa_xhr();
-        if(peticion_http) {
-            peticion_http.onreadystatechange = muestraMunicipios;
-            peticion_http.open("GET", "http://localhost/DAM-2015/AJAX6/server/cargaMunicipiosXML.php?nocache="+Math.random(), true);
-            peticion_http.send(null);
+        var lista_municipios = document.getElementById("provincia");
+        var idProvincia = lista_municipios.options[lista_provincias.selectedIndex].value;
+        if(!isNaN(idProvincia)) {
+            peticion_http = inicializa_xhr();
+            if(peticion_http) {
+                peticion_http.onreadystatechange = muestraMunicipios;
+                peticion_http.open("GET", "http://localhost/DAM-2015/AJAX6/server/cargaMunicipiosXML.php?nocache="+Math.random(), true);
+                peticion_http.send(null);
+                peticion_http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                peticion_http.send("provincia=" + idProvincia);
+            }
         }
     };
 
@@ -86,41 +92,3 @@ window.onload = function(){
 
 };
 
-
-/*
-function cargaMunicipios() {
-    var lista = document.getElementById("provincia");
-    var provincia = lista.options[lista.selectedIndex].value;
-    if(!isNaN(provincia)) {
-        peticion = inicializa_xhr();
-        if (peticion) {
-            peticion.onreadystatechange = muestraMunicipios;
-            peticion.open("POST", "http://localhost/RUTA_HASTA_ARCHIVO/cargaMunicipiosXML.php?nocache=" + Math.random(), true);
-            peticion.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            peticion.send("provincia=" + provincia);
-        }
-    }
-}
-
-function muestraMunicipios() {
-    if (peticion.readyState == 4) {
-        if (peticion.status == 200) {
-            var lista = document.getElementById("municipio");
-            var documento_xml = peticion.responseXML;
-
-            var municipios = documento_xml.getElementsByTagName("municipios")[0];
-            var losMunicipios = municipios.getElementsByTagName("municipio");
-
-            // Borrar elementos anteriores
-            lista.options.length = 0;
-
-            // Se utiliza el método de crear elementos Option() y añadirlos a la lista
-            for(i=0; i<losMunicipios.length; i++) {
-                var codigo = losMunicipios[i].getElementsByTagName("codigo")[0].firstChild.nodeValue;
-                var nombre = losMunicipios[i].getElementsByTagName("nombre")[0].firstChild.nodeValue;
-                lista.options[i] = new Option(nombre, codigo);
-            }
-        }
-    }
-}
-*/
