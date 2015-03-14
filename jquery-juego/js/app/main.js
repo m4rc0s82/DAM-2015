@@ -9,12 +9,18 @@ $(document).ready(function(){
     // Iniciaremos las variables privadas que sean necesarias.
     var html_nuevo = "";
     var html_click = "";
+    var cantidad = 0;
     var cont = 0;
     var cuantos = 0;
+    var cuantos_eliminados = 0;
+    var $log = $("#eliminados");
 
     $('#carga').on("click", function(){
         var columnas = $('#columnas').val();
         var filas = $('#filas').val();
+        var cantidad = cantidad;
+        // Necesitaremos las funciones de callback para los eventos.
+        // Necesitaremos una funcion encargada de llamar al modulo que se define en el fichero net.js con los parametros adecuados para realizar la llamada y capturar la respuesta AJAX.
         APP.net.peticion(columnas * filas, cb);
 
         /*mostramos las capas necesarias y ocultamos las otras */
@@ -39,6 +45,18 @@ $(document).ready(function(){
             });
         }*/
 
+        // Necesitaremos una funcion que controle la lista de eliminados.
+        function insertarEliminado( cuantos_eliminados, date, color, animal, nombre ){
+            var seconds = date.getSeconds();
+            var minutes = date.getMinutes();
+            var hour = date.getHours();
+            console.log(cuantos_eliminados);
+            if (cuantos_eliminados>=6){
+                $log.animate({scrollTop: '100%'});
+            }
+            $log.append("<p style='color:"+color+"'> ["+ hour +": "+ minutes +": "+ seconds+ "] Has hecho click en el "+ animal + " llamado "+ nombre +" de color "+color+"</p>");
+        }
+
         function cargarColor(){
             cont = cont +1000;
             $("img").each(function() {
@@ -49,9 +67,11 @@ $(document).ready(function(){
 
                 if ((timer * 1000 == cont) && !($(this).hasClass(color))){
                     $(this).addClass(color);
+                    // Necesitaremos añadir los eventos necesarios en el momento adecuado.
                     $(this).on("click",function(){
-                        var $log = $("#eliminados");
-                        $log.append("<p style='color:"+color+"'>Has hecho click en el "+ animal + " llamado "+ nombre +" de color "+color+"</p>");
+                        var date = new Date();
+                        cuantos_eliminados++;
+                        insertarEliminado(cuantos_eliminados,date, color, animal, nombre);
                         $(this).addClass("hidden");
                     });
                 }
@@ -90,15 +110,8 @@ $(document).ready(function(){
 
 
 
-    // Necesitaremos añadir los eventos necesarios en el momento adecuado.
-
-    // Necesitaremos las funciones de callback para los eventos.
-
-    // Necesitaremos una funcion encargada de llamar al modulo que se define en el fichero net.js con los parametros adecuados para realizar la llamada y capturar la respuesta AJAX.
 
     // Necesitaremos una funcion que controle el final del juego.
-
-    // Necesitaremos una funcion que controle la lista de eliminados.
 
     // Cualquier otra funcion que sea necesaria.
 
