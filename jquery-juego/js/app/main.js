@@ -8,10 +8,7 @@ $(document).ready(function(){
 
     // Iniciaremos las variables privadas que sean necesarias.
     var html_nuevo = "";
-    var html_click = "";
-    var cantidad = 0;
     var cont = 0;
-    var cuantos = 0;
     var cuantos_eliminados = 0;
     var $log = $("#eliminados");
 
@@ -34,25 +31,14 @@ $(document).ready(function(){
             return imagen;
         }
 
-        // Necesitaremos una o varias funcion(es) que controle(n) el paso del tiempo.
-        /*function cargarColor(){
-            $(".imagen").each(function() {
-                var timer = $(this).attr("data-timer");
-                var color = $(this).attr("data-color");
-                setTimeout(function() {
-                    $(this).addClass(color);
-                }, timer * 1000);
-            });
-        }*/
 
         // Necesitaremos una funcion que controle la lista de eliminados.
         function insertarEliminado( cuantos_eliminados, date, color, animal, nombre ){
             var seconds = date.getSeconds();
             var minutes = date.getMinutes();
             var hour = date.getHours();
-            console.log(cuantos_eliminados);
             if (cuantos_eliminados>=6){
-                $log.animate({scrollTop: '100%'});
+                $log.animate({scrollTop: '+=100px'});
             }
             $log.append("<p style='color:"+color+"'> ["+ hour +": "+ minutes +": "+ seconds+ "] Has hecho click en el "+ animal + " llamado "+ nombre +" de color "+color+"</p>");
         }
@@ -79,14 +65,7 @@ $(document).ready(function(){
         }
 
         function ejecutarCarga(){
-            var total = $("img").size();
-            var cuantos = 0;
-            if (cuantos <= total){
-                var miIntervalo = setInterval(cargarColor, 1000);
-            }else{
-                clearInterval(miIntervalo);
-            }
-
+                setInterval(cargarColor, 1000);
         }
 
 
@@ -99,9 +78,10 @@ $(document).ready(function(){
             }
             $contenido.html(html_nuevo);
             //console.log(html_nuevo);
+            ejecutarCarga();
         }
 
-        ejecutarCarga();
+
 
 
     });
