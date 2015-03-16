@@ -1,6 +1,6 @@
  window.onload = function(){
 
-    if (Modernizr.input.placeHolder){
+    if (Modernizr.input.placeholder){
         console.log("YEP");
     } else {
         console.log("NOP");
