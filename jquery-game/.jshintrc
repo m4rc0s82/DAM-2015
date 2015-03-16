@@ -1,0 +1,9 @@
+{
+
+    "strict": true,
+    "browser": true,
+    "jquery": false,
+    "globals": {
+        "document" : true,
+        "$" : true}
+}
