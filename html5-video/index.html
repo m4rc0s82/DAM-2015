@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML5 - Video</title>
+    </head>
+    <body>
+        <h1>HTML5 - VIDEO</h1>
+        <video id="myVideo">
+            <source src="videos/video1.mp4" type="video/mp4" codecs="avc1.42E01E, mp4a.40.2" >
+            <source src="videos/video1.webm" type="video/webm" codecs="vp8, vorbis">
+        </video>
+
+        <form>
+            <select name="video" id="lista_videos">
+                <option value="video1">Video 1</option>
+                <option value="video2">Video 2</option>
+            </select>
+            <input type="button" id="iniciar" value="Iniciar"/>
+            <input type="button" id="pausa" value="Pausa"/>
+            <input type="button" id="parar" value="Parar"/>
+            <input type="button" id="avanzar" value="Avanzar"/>
+            <input type="button" id="retroceder" value="Retroceder"/>
+            <input type="button" id="inicio" value="Inicio"/>
+            <input type="button" id="fin" value="Fin"/>
+            <input type="button" id="pantalla_completa" value="Pantalla completa"/>
+            <input type="range" id="volumen" min="0" max="1" value="0.5" step="0.1"  />
+            <progress id="progreso" min="0" max="100" value="0"></progress>
+        </form>
+
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
