@@ -21,6 +21,15 @@ ul{
     list-style-type: none;
 }
 
+.navbar-inverse {
+    background-color: #b6cffa;
+    border-color: #b6cffa;
+}
+
+.navbar-inverse .navbar-nav>li>a{
+    color: #FFF;
+}
+
 .fleft{
     float: left;
 }
