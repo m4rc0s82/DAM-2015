@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Periodico con Bootsrap</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="header">
+                <h1>EL PERIODICO DE DAM 2015</h1>
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <div class="container">
+                    <!--  Botón para abrir el menú en mobile(hamburguesita) -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#items_de_navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Listado de iconos del menú -->
+                    <div class="collapse navbar-collapse" id="items_de_navbar">
+                        <ul class="nav navbar-nav">
+                            <!-- Con la clase active, el item va a ser el activo de la pagina actual -->
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="#">Menu 1</a></li>
+                            <li><a href="#">Menu 2</a></li>
+                            <li><a href="#">Menu 3</a></li>
+                            <li><a href="#">Menu 4</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container -->
+            </nav>
+        </div>
+        <div class="row">
+            <div class="jumbotron">
+                <h1>Suscribete a nuestras noticias</h1>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non ad molestiae fugit tempore beatae obcaecati facere aperiam harum, quo assumenda qui, nulla impedit est minus illo? Fugiat porro sit officia.</p>
+                <p><a class="btn btn-lg btn-success" href="#" role="button">Suscribirme</a></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Lista de Noticias</h2>
+                <ul>
+                    <li>
+                        <h2>Noticia de Jon <small>Llega el fin de semana</small></h2>
+                        <img src="http://lorempixel.com/800/150" class="img-responsive">
+                        <p class="img-footer">Pie de foto de la noticia</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique nihil non dicta magnam fugit aut vitae illum, enim optio alias obcaecati impedit, consectetur, natus mollitia fuga ex commodi quasi, ea.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, praesentium officiis ipsa, culpa quasi porro voluptatum quod dicta quibusdam veniam accusantium pariatur deleniti, qui. Esse eius similique nisi a cupiditate.</p>
+                    </li>
+                    <li>
+                        <h2>Noticia de Jon <small>Llega el fin de semana</small></h2>
+                        <img src="http://lorempixel.com/805/150" class="img-responsive">
+                        <p class="img-footer">Pie de foto de la noticia</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique nihil non dicta magnam fugit aut vitae illum, enim optio alias obcaecati impedit, consectetur, natus mollitia fuga ex commodi quasi, ea.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, praesentium officiis ipsa, culpa quasi porro voluptatum quod dicta quibusdam veniam accusantium pariatur deleniti, qui. Esse eius similique nisi a cupiditate.</p>
+                    </li>
+                    <li>
+                        <h2>Noticia de Jon <small>Llega el fin de semana</small></h2>
+                        <img src="http://lorempixel.com/768/150" class="img-responsive">
+                        <p class="img-footer">Pie de foto de la noticia</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique nihil non dicta magnam fugit aut vitae illum, enim optio alias obcaecati impedit, consectetur, natus mollitia fuga ex commodi quasi, ea.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, praesentium officiis ipsa, culpa quasi porro voluptatum quod dicta quibusdam veniam accusantium pariatur deleniti, qui. Esse eius similique nisi a cupiditate.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h2>Nuestros redactores</h2>
+                <ul class="list-unstyled">
+                    <li><a class="links" href="ander.html" data-toggle="tooltip" title="Periodico de Ander" data-placement="right">Ander</a></li>
+                    <li><a class="links" href="alberto.html" data-toggle="tooltip" title="Periodico de Alberto" data-placement="right">Alberto</a></li>
+                    <li><a class="links" href="ion.html" data-toggle="tooltip" title="Periodico de Ion" data-placement="right">Ion</a></li>
+                    <li><a class="links" href="mikel.html" data-toggle="tooltip" title="Periodico de Mikel" data-placement="right">Mikel</a></li>
+                    <li><a class="links" href="aitor.html" data-toggle="tooltip" title="Periodico de Aitor" data-placement="right">Aitor</a></li>
+                    <li><a class="links" href="itziar.html" data-toggle="tooltip" title="Periodico de Itziar" data-placement="right">Itziar</a></li>
+                    <li><a class="links" href="jon.html" data-toggle="tooltip" title="Periodico de Jon" data-placement="right">Jon</a></li>
+                    <li><a class="links" href="marcos.html" data-toggle="tooltip" title="Periodico de Marcos" data-placement="right">Marcos</a></li>
+                    <li><a class="links" href="markel.html" data-toggle="tooltip" title="Periodico de Markel" data-placement="right">Markel</a></li>
+                    <li><a class="links" href="kepa.html" data-toggle="tooltip" title="Periodico de Kepa" data-placement="right">Kepa</a></li>
+                    <li><a class="links" href="olatz.html" data-toggle="tooltip" title="Periodico de Olatz" data-placement="right">Olatz</a></li>
+                    <li><a class="links" href="amaia.html" data-toggle="tooltip" title="Periodico de Amaia" data-placement="right">Amaia</a></li>
+                    <li><a class="links" href="eduardo.html" data-toggle="tooltip" title="Periodico de Eduardo" data-placement="right">Eduardo</a></li>
+                    <li><a class="links" href="xabier.html" data-toggle="tooltip" title="Periodico de Xabier" data-placement="right">Xabier</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
