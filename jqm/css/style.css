@@ -1,0 +1,27 @@
+.caja{
+    width: 50px;
+    height: 50px;
+
+    background-color: #cfcff1;
+
+    padding-bottom: 5px;
+}
+
+.tap{
+    background-color: #d9f0b7;
+}
+
+.double{
+    width: 100px;
+    height: 100px;
+}
+
+.links{
+    clear: both;
+
+    padding-top: 50px;
+}
+
+.fright{
+    float:right;
+}
